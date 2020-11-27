@@ -138,6 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cec4a253660466fae4c7b898cdaaa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_OnSeenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnNotSeenEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4152319362785031961
 GameObject:
   m_ObjectHideFlags: 0
