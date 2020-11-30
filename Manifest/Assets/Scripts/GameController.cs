@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera _mainCam;
     [SerializeField] Transform _camParent;
     [SerializeField] GameObject _camLight;
+    [SerializeField] GameObject _bg;
 
     [SerializeField] public float _aTime = 2f;
 
@@ -28,6 +29,9 @@ public class GameController : MonoBehaviour
 
     void GetTouchInput()
     {
+        int layerMask = 1 << 2;
+        layerMask = ~layerMask;
+
         #region RayCast touch and mouse
         if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -36,7 +40,7 @@ public class GameController : MonoBehaviour
             {
                 Ray ray = _mainCam.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, 1000, layerMask))
                 {
                     if (hit.collider.CompareTag("Forme"))
                     {
@@ -65,7 +69,7 @@ public class GameController : MonoBehaviour
         {
             Ray ray = _mainCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 1000, layerMask))
             {
                 if (hit.collider.CompareTag("Forme"))
                 {
@@ -108,11 +112,13 @@ public class GameController : MonoBehaviour
 
     void ActivateCamLight()
     {
+        _bg.SetActive(true);
         _camLight.SetActive(true);
     }
 
     void DeactivateCamLight()
     {
+        _bg.SetActive(false);
         _camLight.SetActive(false);
     }
 
