@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e28d29597b22476c94ce831a0b56116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFilename: GSWP.zpt
+  currentFilename: Couverture.zpt
 --- !u!114 &691223348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a46277bb2e24858882d73be7e2e0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: GSWP.zpt
+  Target: Couverture.zpt
   orientation: 0
   m_OnSeenEvent:
     m_PersistentCalls:
@@ -2141,7 +2141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1303225569
 Transform:
   m_ObjectHideFlags: 0
@@ -2151,7 +2151,7 @@ Transform:
   m_GameObject: {fileID: 1303225568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 855459652}
   - {fileID: 147717680}
@@ -3627,6 +3627,8 @@ MonoBehaviour:
   _camParent: {fileID: 1647159010}
   _camLight: {fileID: 1525800183}
   _bg: {fileID: 191078773}
+  _shapes: {fileID: 1303225568}
+  _bgColor: {fileID: 0}
   _aTime: 1.5
   _targetObject: {fileID: 0}
   _prevTargetObject: {fileID: 0}

@@ -9,6 +9,13 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject _camLight;
     [SerializeField] GameObject _bg;
 
+    [SerializeField] GameObject _shapes;
+
+    [SerializeField] Material _bgColor;
+
+    Color blackIn = new Color(0,0,0,0.8f);
+    Color blackOut = new Color(0, 0, 0, 0f);
+
     [SerializeField] public float _aTime = 2f;
 
     public GameObject _targetObject;
@@ -19,7 +26,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-
+        _bgColor = _bg.GetComponent<MeshRenderer>().material;
     }
 
 
@@ -50,12 +57,15 @@ public class GameController : MonoBehaviour
                             _targetObject = null;
                             MoveToOrigin(hit.collider.gameObject);
                         }
-                        else if (_targetObject != _prevTargetObject)
+                        else
                         {
                             _targetObject = hit.collider.gameObject;
                             MoveToCam(_targetObject);
                         }
-                        _prevTargetObject = _targetObject;
+                    }
+                    else if (hit.collider.CompareTag("Manifest") && !hasTouched)
+                    {
+                        SetShapes();
                     }
                 }
                 //hasTouched = false;
@@ -89,6 +99,10 @@ public class GameController : MonoBehaviour
                         MoveToCam(_targetObject);
                     }
                 }
+                else if (hit.collider.CompareTag("Manifest") && !hasTouched)
+                {
+                    SetShapes();
+                }
             }
         }
         #endregion
@@ -101,7 +115,10 @@ public class GameController : MonoBehaviour
         _obj.GetComponent<Animator>().SetBool("Spin", false);
         _obj.GetComponent<Forme>()._desAnim.SetBool("Active", true);
         _obj.transform.SetParent(_camParent.transform);
-        LeanTween.move(_obj, _camParent.position, _aTime).setEaseInOutQuint().setOnComplete(ActivateCamLight);
+        ActivateCamLight();
+        //StartCoroutine(FadeInObject(_bg));
+        TweenObjectColor(_bg);
+        LeanTween.move(_obj, _camParent.position, _aTime).setEaseInOutQuint();
     }
 
     void MoveToOrigin(GameObject _obj)
@@ -111,16 +128,27 @@ public class GameController : MonoBehaviour
         _obj.GetComponent<Animator>().SetBool("Spin", true);
         _obj.GetComponent<Forme>()._desAnim.SetBool("Active", false);
         _obj.transform.SetParent(_obj.GetComponent<Forme>()._origin.transform);
-        LeanTween.move(_obj, _obj.GetComponent<Forme>()._origin.transform, _aTime).setEaseInOutQuint().setOnComplete(DeactivateCamLight);
+        //StartCoroutine(FadeOutObject(_bg));
+        TweenObjectColor(_bg);
+        DeactivateCamLight();
+        LeanTween.move(_obj, _obj.GetComponent<Forme>()._origin.transform, _aTime).setEaseInOutQuint();
     }
 
-    void SetBackground(bool state) {
+    void SetBackground(bool state)
+    {
         _bg.SetActive(state);
+    }
+
+    void BgOn() {
+        _bg.SetActive(true);
+    }
+
+    void BgOff() {
+        _bg.SetActive(false);
     }
 
     void ActivateCamLight()
     {
-        SetBackground(true);
         _camLight.SetActive(true);
     }
 
@@ -130,4 +158,78 @@ public class GameController : MonoBehaviour
         _camLight.SetActive(false);
     }
 
+    void SetShapes()
+    {
+        _shapes.SetActive(true);
+        LeanTween.scale(_shapes, Vector3.one, 2f).setEaseInOutExpo();
+        hasTouched = true;
+    }
+
+    public void TweenObjectColor(GameObject obj) {
+        // Get the mesh renderer of the object
+        MeshRenderer meshRenderer = obj.GetComponent<MeshRenderer>();
+
+        // Get the color value of the main material
+        Color color = meshRenderer.materials[0].color;
+
+        if (color.a > 0)
+        {
+            BgOn();
+            LeanTween.value(obj, color, blackIn, _aTime);
+        }
+        else {
+            LeanTween.value(obj, color, blackOut, _aTime).setOnComplete(BgOff);
+        }
+    }
+
+    public IEnumerator FadeOutObject(GameObject objToFade)
+    {
+        // Get the mesh renderer of the object
+        MeshRenderer meshRenderer = objToFade.GetComponent<MeshRenderer>();
+
+        // Get the color value of the main material
+        Color color = meshRenderer.materials[0].color;
+
+        // While the color's alpha value is above 0
+        while (color.a > 0)
+        {
+            // Reduce the color's alpha value
+            color.a -= 0.1f;
+
+            // Apply the modified color to the object's mesh renderer
+            meshRenderer.materials[0].color = color;
+
+            // Wait for the frame to update
+            yield return new WaitForEndOfFrame();
+        }
+
+        // If the material's color's alpha value is less than or equal to 0, end the coroutine
+        yield return new WaitUntil(() => meshRenderer.materials[0].color.a <= 0f);
+    }
+
+    public IEnumerator FadeInObject(GameObject objToFade)
+    {
+        // Get the mesh renderer of the object
+        MeshRenderer meshRenderer = objToFade.GetComponent<MeshRenderer>();
+
+        // Get the color value of the main material
+        Color color = meshRenderer.materials[0].color;
+
+        // While the color's alpha value is above 0
+        while (color.a < 1)
+        {
+            // Reduce the color's alpha value
+            color.a += 0.1f;
+
+            // Apply the modified color to the object's mesh renderer
+            meshRenderer.materials[0].color = color;
+
+            // Wait for the frame to update
+            yield return new WaitForEndOfFrame();
+        }
+
+        // If the material's color's alpha value is less than or equal to 0, end the coroutine
+        yield return new WaitUntil(() => meshRenderer.materials[0].color.a >= 1f);
+    }
 }
+   
