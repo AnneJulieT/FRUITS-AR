@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] public float _aTime = 2f;
 
     public GameObject _targetObject;
+    public GameObject _prevTargetObject;
 
     public bool hasTouched = false;
     public bool isTriggered = false;
@@ -44,16 +45,17 @@ public class GameController : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Forme"))
                     {
-                        if (_targetObject == hit.collider.gameObject)
+                        if (_targetObject == hit.collider.gameObject) // If reselect same shape, move back to origin
                         {
                             _targetObject = null;
                             MoveToOrigin(hit.collider.gameObject);
                         }
-                        else
+                        else if (_targetObject != _prevTargetObject)
                         {
                             _targetObject = hit.collider.gameObject;
                             MoveToCam(_targetObject);
                         }
+                        _prevTargetObject = _targetObject;
                     }
                 }
                 //hasTouched = false;
@@ -97,6 +99,7 @@ public class GameController : MonoBehaviour
         //Debug.Log("Moving object to Cam!");
         LeanTween.cancelAll();
         _obj.GetComponent<Animator>().SetBool("Spin", false);
+        _obj.GetComponent<Forme>()._desAnim.SetBool("Active", true);
         _obj.transform.SetParent(_camParent.transform);
         LeanTween.move(_obj, _camParent.position, _aTime).setEaseInOutQuint().setOnComplete(ActivateCamLight);
     }
@@ -106,19 +109,24 @@ public class GameController : MonoBehaviour
         //Debug.Log("Moving object to Origin!");
         LeanTween.cancelAll();
         _obj.GetComponent<Animator>().SetBool("Spin", true);
+        _obj.GetComponent<Forme>()._desAnim.SetBool("Active", false);
         _obj.transform.SetParent(_obj.GetComponent<Forme>()._origin.transform);
         LeanTween.move(_obj, _obj.GetComponent<Forme>()._origin.transform, _aTime).setEaseInOutQuint().setOnComplete(DeactivateCamLight);
     }
 
+    void SetBackground(bool state) {
+        _bg.SetActive(state);
+    }
+
     void ActivateCamLight()
     {
-        _bg.SetActive(true);
+        SetBackground(true);
         _camLight.SetActive(true);
     }
 
     void DeactivateCamLight()
     {
-        _bg.SetActive(false);
+        SetBackground(false);
         _camLight.SetActive(false);
     }
 
