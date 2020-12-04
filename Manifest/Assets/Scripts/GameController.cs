@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         GetTouchInput();
 
-        if (hasTouched && _targetObject == null)
+        if (/**hasTouched && **/_targetObject == null)
         {
             if (isTracking)
             {
