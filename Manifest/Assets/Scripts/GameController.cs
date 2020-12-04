@@ -8,7 +8,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform _camParent;
     [SerializeField] GameObject _camLight;
     [SerializeField] GameObject _bg;
-    [SerializeField] GameObject _callToAction;
+    [SerializeField] GameObject _trackingCallToAction;
+    [SerializeField] GameObject _objectCTA;
 
     [SerializeField] GameObject _shapes;
 
@@ -24,6 +25,7 @@ public class GameController : MonoBehaviour
 
     public bool hasTouched = false;
     public bool isTriggered = false;
+    public bool isTracking = false;
 
     void Start()
     {
@@ -34,6 +36,14 @@ public class GameController : MonoBehaviour
     void Update()
     {
         GetTouchInput();
+
+        if (!isTracking && _targetObject != null && hasTouched)
+        {
+            _objectCTA.SetActive(true);
+        } else 
+        {
+            _objectCTA.SetActive(false);
+        }
     }
 
     void GetTouchInput()
@@ -51,25 +61,8 @@ public class GameController : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 1000, layerMask))
                 {
-                    if (hit.collider.CompareTag("Forme"))
-                    {
-                        if (_targetObject == hit.collider.gameObject) // If reselect same shape, move back to origin
-                        {
-                            _targetObject = null;
-                            MoveToOrigin(hit.collider.gameObject);
-                        }
-                        else
-                        {
-                            _targetObject = hit.collider.gameObject;
-                            MoveToCam(_targetObject);
-                        }
-                    }
-                    else if (hit.collider.CompareTag("Manifest") && !hasTouched)
-                    {
-                        SetShapes();
-                    }
+                    OnHit(hit.collider);
                 }
-                //hasTouched = false;
                 return;
             }
         }
@@ -84,27 +77,7 @@ public class GameController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 1000, layerMask))
             {
-                if (hit.collider.CompareTag("Forme"))
-                {
-                    //Debug.Log(hit.collider.name);
-                    //_targetObject = hit.collider.gameObject;
-
-                    if (_targetObject == hit.collider.gameObject)
-                    {
-                        _targetObject = null;
-                        MoveToOrigin(hit.collider.gameObject);
-                    }
-                    else
-                    {
-                        _targetObject = hit.collider.gameObject;
-                        MoveToCam(_targetObject);
-                    }
-                }
-                else if (hit.collider.CompareTag("Manifest") && !hasTouched)
-                {
-                    SetShapes();
-                    _callToAction.SetActive(false);
-                }
+                OnHit(hit.collider);
             }
         }
         #endregion
@@ -137,6 +110,33 @@ public class GameController : MonoBehaviour
         LeanTween.move(_obj, _obj.GetComponent<Forme>()._origin.transform, _aTime).setEaseInOutQuint();
     }
 
+    void OnHit(Collider collider)
+    {
+        if (collider.CompareTag("Forme"))
+        {
+            //Debug.Log(hit.collider.name);
+            //_targetObject = hit.collider.gameObject;
+
+            if (_targetObject == collider.gameObject)
+            {
+                _targetObject = null;
+                MoveToOrigin(collider.gameObject);
+                _objectCTA.SetActive(true);
+            }
+            else
+            {
+                _targetObject = collider.gameObject;
+                MoveToCam(_targetObject);
+                _objectCTA.SetActive(false);
+            }
+        }
+        else if (collider.CompareTag("Manifest") && !hasTouched)
+        {
+            SetShapes();
+            //_trackingCallToAction.SetActive(false);
+        }
+    }
+
     void SetBackground(bool state)
     {
         _bg.SetActive(state);
@@ -166,6 +166,11 @@ public class GameController : MonoBehaviour
         _shapes.SetActive(true);
         LeanTween.scale(_shapes, Vector3.one, 2f).setEaseInOutExpo();
         hasTouched = true;
+    }
+
+    public void SetTrackingState(bool state)
+    {
+        isTracking = state;
     }
 }
    
