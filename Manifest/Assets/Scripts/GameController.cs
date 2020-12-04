@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform _camParent;
     [SerializeField] GameObject _camLight;
     [SerializeField] GameObject _bg;
+    [SerializeField] GameObject _callToAction;
 
     [SerializeField] GameObject _shapes;
 
@@ -102,6 +103,7 @@ public class GameController : MonoBehaviour
                 else if (hit.collider.CompareTag("Manifest") && !hasTouched)
                 {
                     SetShapes();
+                    _callToAction.SetActive(false);
                 }
             }
         }
