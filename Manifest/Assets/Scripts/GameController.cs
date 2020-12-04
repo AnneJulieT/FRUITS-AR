@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] public float _aTime = 2f;
 
-    public GameObject _targetObject;
-    public GameObject _prevTargetObject;
+    public GameObject _targetObject = null;
+    public GameObject _prevTargetObject = null;
 
     public bool hasTouched = false;
     public bool isTriggered = false;
@@ -37,12 +37,16 @@ public class GameController : MonoBehaviour
     {
         GetTouchInput();
 
-        if (!isTracking && _targetObject != null && hasTouched)
+        if (hasTouched && _targetObject == null)
         {
-            _objectCTA.SetActive(true);
-        } else 
-        {
-            _objectCTA.SetActive(false);
+            if (isTracking)
+            {
+                _objectCTA.SetActive(false);
+            }
+            else
+            {
+                _objectCTA.SetActive(true);
+            }
         }
     }
 
@@ -170,7 +174,11 @@ public class GameController : MonoBehaviour
 
     public void SetTrackingState(bool state)
     {
-        isTracking = state;
+        isTracking = !state;
+        if (_targetObject == null)
+        {
+            _trackingCallToAction.SetActive(!state);
+        }
     }
 }
    
