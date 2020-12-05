@@ -1,13 +1,20 @@
 <!-- Adapted from https://github.com/greggman/better-unity-webgl-template/blob/master/Assets/WebGLTemplates/BetterTemplate/index.html -->
-<!-- 26 June 2020 -->
+<!-- 27 novembre 2020 -->
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>%UNITY_WEB_NAME%</title>
+    <title>Manifeste - Le Culte</title>
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
         html {
             box-sizing: border-box;
         }
@@ -20,7 +27,9 @@
 
         body {
             margin: 0;
-            background: #444;
+            background-color: #181818;
+            width: 100%;
+            height: 100vh;
         }
 
         #gameContainer {
@@ -63,13 +72,74 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(0, -50%);
+        }
+        
+        svg#logo{
+            width: 50%;
+            align-self: center;
+            justify-self: center;
+            display: block;
+        }
+        .st0{
+            fill:none;
+            stroke:#fff;
+            stroke-width:30;
+            stroke-miterlimit:10;
+        }
+        svg#logo path{
+            stroke-dasharray: 1057;
+            animation: circle-anim 1.5s linear forwards;
+        }
+        svg#logo polygon{
+            stroke-dasharray: 1333;
+            animation: triangle-anim 1.5s linear forwards;
+        }
+
+        @keyframes circle-anim{
+            0%{
+                stroke-dashoffset: 1057;
+                stroke-dasharray: 1057;
+            }
+            99%{
+                stroke-dashoffset: none;
+                stroke-dasharray: 1057;
+            }
+            100%{
+                stroke-dashoffset: none;
+                stroke-dasharray: none;
+            }
+        }
+        @keyframes triangle-anim{
+            0%{
+                stroke-dashoffset: 1333;
+                stroke-dasharray: 1333;
+            }
+            99%{
+                stroke-dashoffset: none;
+                stroke-dasharray: 1333;
+            }
+            100%{
+                stroke-dashoffset: none;
+                stroke-dasharray: none;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="gameContainer"></div>
+    
     <div id="loader">
+        <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1280 1024" style="enable-background:new 0 0 1280 1024;" xml:space="preserve">
+        <path class="st0" d="M522.8,611.7c-55.3-37.4-91.6-100.7-91.6-172.4c0-114.9,93.2-208.1,208.1-208.1c114.9,0,208.1,93.2,208.1,208.1
+            c0,71.4-35.9,134.3-90.7,171.8"/>
+        <polygon class="st0" points="857.9,792.8 422.1,792.8 522.8,611.7 531,596.9 640,401 749,596.9 756.8,611 "/>
+        </svg>
         <div class="progress">
             <div class="full"></div>
         </div>
