@@ -32,4 +32,5 @@ public class petalController : MonoBehaviour
         transfromRef = gameObject.transform;
         hasPos = true;
     }
+
 }

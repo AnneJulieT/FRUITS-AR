@@ -15,13 +15,10 @@ public class naissanceController : MonoBehaviour
     private void Start()
     {
         vase.SetActive(false);
-        //vaseCase.SetActive(false);
-        //petalWrapper.SetActive(false);
         vaseBroken = false;
         GoCoroutine = false;
         StartCoroutine(InstantiatePetals());
     }
-    // Start is called before the first frame update
     public void Appear()
     {
         vase.SetActive(true);
