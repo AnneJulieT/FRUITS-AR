@@ -12,7 +12,10 @@ public class pourritureController : MonoBehaviour
     [SerializeField] private GameObject parapluie;
     [SerializeField] GameObject instRef;
     [SerializeField] private AudioSource musique;
-   private ArrayList cherryList = new ArrayList();
+
+
+    private ArrayList cherryList = new ArrayList();
+    
 
     private void Start()
     {
@@ -21,6 +24,7 @@ public class pourritureController : MonoBehaviour
         bottleSmash.color = new Color(Random.Range(0,0.9f), Random.Range(0,0.5f), Random.Range(0.05f,0.9f)); 
         lva.level = 0.68f;
         musique.Stop();
+
     }
 
     private void Update()

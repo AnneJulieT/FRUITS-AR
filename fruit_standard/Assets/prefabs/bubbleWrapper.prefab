@@ -4997,6 +4997,7 @@ GameObject:
   - component: {fileID: 3443068562966832936}
   - component: {fileID: 6342491706308520801}
   - component: {fileID: 608988177604591213}
+  - component: {fileID: 7804754786589857949}
   m_Layer: 0
   m_Name: orangeBubble
   m_TagString: Untagged
@@ -5123,6 +5124,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gouttes: {fileID: 7194965595909563251}
   bubble: {fileID: 3050989471892891400}
+--- !u!114 &7804754786589857949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050989472311477057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4af0f3190e186d488b4e27524c102cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gouttes: {fileID: 0}
+  bubble: {fileID: 0}
+  SoundEmetor: {fileID: 0}
+  clipList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &3050989472663098598
 GameObject:
   m_ObjectHideFlags: 0
