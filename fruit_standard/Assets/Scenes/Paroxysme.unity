@@ -400,7 +400,7 @@ PrefabInstance:
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763958058}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnNotSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -408,14 +408,14 @@ PrefabInstance:
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnNotSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763958058}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Appear
+      value: startExperience
       objectReference: {fileID: 0}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnNotSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -423,15 +423,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnNotSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Disapear
+      value: endExperience
       objectReference: {fileID: 0}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: pourritureController, Assembly-CSharp
+      value: flot_v2, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnNotSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: pourritureController, Assembly-CSharp
+      value: flot_v2, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1271340273445867423, guid: ee004b2beb29646d1bca329aa8841019, type: 3}
       propertyPath: m_OnSeenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -530,9 +530,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pourritureController, Assembly-CSharp
-        m_MethodName: Disapear
+      - m_Target: {fileID: 1763958058}
+        m_TargetAssemblyTypeName: flot_v2, Assembly-CSharp
+        m_MethodName: endExperience
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -846,9 +846,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pourritureController, Assembly-CSharp
-        m_MethodName: Appear
+      - m_Target: {fileID: 1763958058}
+        m_TargetAssemblyTypeName: flot_v2, Assembly-CSharp
+        m_MethodName: startExperience
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
