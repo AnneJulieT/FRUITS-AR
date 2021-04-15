@@ -34,7 +34,7 @@ public class flot_v2 : MonoBehaviour
                 GameObject orangeBub = Instantiate(prefabBulle, new Vector3(0f, 0f, 0f), Quaternion.Euler(0f, Random.Range(0, 360), 0f));
 
 
-                float scale = Random.Range(0.5f, 1.5f);
+                float scale = Random.Range(0.2f, 0.5f);
                 orangeBub.transform.localScale = new Vector3(scale, scale, scale);
                 orangeBub.SetActive(true);
                 bubbleList.Insert(0, orangeBub);
