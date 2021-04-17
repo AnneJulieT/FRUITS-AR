@@ -12,6 +12,8 @@ public class pourritureController : MonoBehaviour
     [SerializeField] private GameObject parapluie;
     [SerializeField] GameObject instRef;
     [SerializeField] private AudioSource musique;
+    private float speedCoef = 0.005f;
+
 
 
     private ArrayList cherryList = new ArrayList();
@@ -24,6 +26,7 @@ public class pourritureController : MonoBehaviour
         bottleSmash.color = new Color(Random.Range(0,0.9f), Random.Range(0,0.5f), Random.Range(0.05f,0.9f)); 
         lva.level = 0.68f;
         musique.Stop();
+        musique.volume = 0;
 
     }
 
@@ -45,6 +48,9 @@ public class pourritureController : MonoBehaviour
         smoke.SetActive(true);
         cocktailWrapper.SetActive(true);
         musique.Play();
+        musique.volume = 0;
+        StartCoroutine(VolumeUp());
+        
     }
 
     public void Disapear() {
@@ -56,8 +62,9 @@ public class pourritureController : MonoBehaviour
             Destroy((GameObject)cherryList[i]);
         }
         cherryList.Clear();
-        musique.Pause();
-    }
+        musique.volume = 1;
+        StartCoroutine(VolumeDown());
+        }
 
     public void InstanciateCherry() {
         
@@ -65,4 +72,24 @@ public class pourritureController : MonoBehaviour
         go.transform.localScale = new Vector3(9, 9, 9);
         cherryList.Add(go);
     }
+    IEnumerator VolumeUp() {
+        for (float i = 0; i < 1; i += speedCoef)
+        {
+            musique.volume = i;
+            yield return null;
+        }
+    }
+    IEnumerator VolumeDown()
+    {
+        for (float i = 1; i > 0; i -= speedCoef)
+        {
+            musique.volume = i;
+            yield return null;
+        }
+        Debug.Log("PAUSE");
+        musique.Pause();
+        
+    }
+ 
+
 }
