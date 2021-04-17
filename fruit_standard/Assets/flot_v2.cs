@@ -7,9 +7,12 @@ public class flot_v2 : MonoBehaviour
 
     public GameObject prefabBulle;
     private ArrayList bubbleList = new ArrayList();
+    private bool isTracking;
+
     // Start is called before the first frame update
     void Start()
     {
+       isTracking = false;
        StartCoroutine(popBubble());
        StartCoroutine(DestroyBubble());
     }
@@ -25,9 +28,17 @@ public class flot_v2 : MonoBehaviour
     {
         while (true) 
         {
-            GameObject orangeBub = Instantiate(prefabBulle, new Vector3(0f, 0f, 0f), Quaternion.Euler(0f, Random.Range(0, 360), 0f));
-            orangeBub.SetActive(true);
-            bubbleList.Insert(0, orangeBub);
+            if (isTracking) 
+            {
+                
+                GameObject orangeBub = Instantiate(prefabBulle, new Vector3(0f, 0f, 0f), Quaternion.Euler(0f, Random.Range(0, 360), 0f));
+
+
+                float scale = Random.Range(0.2f, 0.5f);
+                orangeBub.transform.localScale = new Vector3(scale, scale, scale);
+                orangeBub.SetActive(true);
+                bubbleList.Insert(0, orangeBub);
+            }
 
             yield return new WaitForSeconds(2f);
         }
@@ -44,6 +55,16 @@ public class flot_v2 : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
         }
+    }
+
+    public void startExperience()
+    {
+        isTracking = true;
+    }
+
+    public void endExperience()
+    {
+        isTracking = false;
     }
 
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class bubbleController : MonoBehaviour
 {
     public ParticleSystem gouttes;
+    // private audioSource[] orgasmeList = new audioSource[10];
+
     //public GameObject bubbleWrapper;
     public GameObject bubble;
 
@@ -28,6 +30,7 @@ public class bubbleController : MonoBehaviour
         gouttes.transform.position = gameObject.transform.position;
         gouttes.Play();
         
+        // audioSource.Play();
     }
 
 }
