@@ -32,4 +32,15 @@ public class bubbleControllerCOPY : MonoBehaviour
         SoundEmetor.Play();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+     Debug.Log("Collision happenend");
+        if (GetComponent<Animator>().enabled)
+        {
+            GetComponent<Animator>().enabled = false;
+            GetComponent<SphereCollider>().enabled = false;
+            DestroyObject();
+        }   
+    }
+   
 }
