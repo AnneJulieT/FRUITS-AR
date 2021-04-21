@@ -13,6 +13,7 @@ public class pourritureController : MonoBehaviour
     [SerializeField] GameObject instRef;
     [SerializeField] private AudioSource musique;
     private float speedCoef = 0.005f;
+    private bool isTracking;
 
 
 
@@ -27,6 +28,7 @@ public class pourritureController : MonoBehaviour
         lva.level = 0.68f;
         musique.Stop();
         musique.volume = 0;
+        isTracking = false;
 
     }
 
@@ -34,14 +36,14 @@ public class pourritureController : MonoBehaviour
     {
         foreach (Touch touch in Input.touches)
         {
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began && isTracking == true)
             {
                 GameObject go = Instantiate(cherryPrefab, instRef.transform.position, Quaternion.identity);
                 go.transform.localScale = new Vector3(9, 9, 9);
                 cherryList.Add(go);
             }
         }
-        }
+    }
     public void Appear() {
         bottleSmash.color = new Color(Random.Range(0, 0.9f), Random.Range(0, 0.5f), Random.Range(0.05f, 0.9f));
         lva.level = 0.68f;
@@ -50,7 +52,7 @@ public class pourritureController : MonoBehaviour
         musique.Play();
         musique.volume = 0;
         StartCoroutine(VolumeUp());
-        
+        isTracking = true;
     }
 
     public void Disapear() {
@@ -64,7 +66,8 @@ public class pourritureController : MonoBehaviour
         cherryList.Clear();
         musique.volume = 1;
         StartCoroutine(VolumeDown());
-        }
+        isTracking = false;
+    }
 
     public void InstanciateCherry() {
         

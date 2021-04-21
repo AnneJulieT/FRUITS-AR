@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MasterFRUIT.unity
+    guid: 8612f09b574fde7479cea82f69b3c1f0
   m_configObjects: {}

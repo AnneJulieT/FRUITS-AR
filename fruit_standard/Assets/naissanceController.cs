@@ -7,6 +7,7 @@ public class naissanceController : MonoBehaviour
     [SerializeField] GameObject petalContainer;
     [SerializeField] private GameObject vase;
     [SerializeField] private GameObject vaseCase;
+    [SerializeField] private GameObject vaseCaseContainer;
     [SerializeField] private GameObject petalWrapper;
     private ArrayList petalList = new ArrayList();
     private bool vaseBroken;
@@ -18,6 +19,17 @@ public class naissanceController : MonoBehaviour
         vaseBroken = false;
         GoCoroutine = false;
         StartCoroutine(InstantiatePetals());
+    }
+
+    private void Update()
+    {
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                OnScreenTouch();
+            }
+        }
     }
     public void Appear()
     {
@@ -35,11 +47,11 @@ public class naissanceController : MonoBehaviour
         {
             if (GoCoroutine)
             {
-                GameObject go = Instantiate(petalWrapper, new Vector3(0, 0, Random.Range(-1, 0.75f)), Quaternion.Euler(0, Random.Range(0, 360), 0), petalContainer.transform);
+                GameObject go = Instantiate(petalWrapper, petalContainer.transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
                 go.SetActive(true);
                 petalList.Add(go);
             }
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2.1f);
         }
         
     }
@@ -63,7 +75,8 @@ public class naissanceController : MonoBehaviour
     public void OnScreenTouch() {
         if (vaseBroken == false && GoCoroutine == true) 
         {
-            GameObject go = Instantiate(vaseCase, new Vector3(-0.00999999978f, 0.888999999f, 0.805999994f), Quaternion.identity);
+            //GameObject go = Instantiate(vaseCase, new Vector3(-0.00999999978f, 0.888999999f, 0.805999994f), Quaternion.identity, vaseCaseContainer.transform);
+            GameObject go = Instantiate(vaseCase, vaseCaseContainer.transform.position, Quaternion.identity);
             go.SetActive(true);
             go.transform.rotation = new Quaternion(0, 0, -0.707106829f, 0.707106829f);
             go.transform.localScale = new Vector3(1.24161148f, 1.24161148f, 1.24161148f);
