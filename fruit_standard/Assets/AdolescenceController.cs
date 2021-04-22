@@ -27,15 +27,22 @@ public class AdolescenceController : MonoBehaviour
         {
             if (touch.phase == TouchPhase.Began)
             {
+                particles.Play();
                 particles.maxParticles = 3500;
+                int indexSon = (int)Random.Range(0, (float)clipList.Count);
+                SourceAudio.clip = clipList[indexSon];
+                SourceAudio.Play();
+               
             }
             if (touch.phase == TouchPhase.Ended)
             {
                 particles.maxParticles = 0;
+                SourceAudio.Stop();
+                
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        /*if (Input.GetKeyDown(KeyCode.S))
         {
             particles.maxParticles = 3500;
             int indexSon = (int)Random.Range(0, (float)clipList.Count);
@@ -45,18 +52,22 @@ public class AdolescenceController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.S))
         {
             particles.maxParticles = 0;
-        }
+        }*/
     }
 
     public void Appear()
     {
         adolescenceWapper.SetActive(true);
-
+        StopCoroutine(stopParticleSystem());
     }
 
     public void Disapear()
     {
         adolescenceWapper.SetActive(false);
-
+        StartCoroutine(stopParticleSystem());
+    }
+    IEnumerator stopParticleSystem() {
+        yield return new WaitForSeconds(3f);
+        particles.Pause();
     }
 }
