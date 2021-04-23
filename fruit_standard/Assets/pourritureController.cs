@@ -10,6 +10,7 @@ public class pourritureController : MonoBehaviour
     [SerializeField] private GameObject cocktailWrapper;
     [SerializeField] private GameObject cherryPrefab;
     [SerializeField] private GameObject parapluie;
+    [SerializeField] private GameObject plane;
     [SerializeField] GameObject instRef;
     [SerializeField] private AudioSource musique;
     private float speedCoef = 0.005f;
@@ -23,6 +24,7 @@ public class pourritureController : MonoBehaviour
     private void Start()
     {
         smoke.SetActive(false);
+        plane.SetActive(false);
         cocktailWrapper.SetActive(false);
         bottleSmash.color = new Color(Random.Range(0,0.9f), Random.Range(0,0.5f), Random.Range(0.05f,0.9f)); 
         lva.level = 0.68f;
@@ -48,15 +50,17 @@ public class pourritureController : MonoBehaviour
         bottleSmash.color = new Color(Random.Range(0, 0.9f), Random.Range(0, 0.5f), Random.Range(0.05f, 0.9f));
         lva.level = 0.68f;
         smoke.SetActive(true);
+        plane.SetActive(true);
         cocktailWrapper.SetActive(true);
         musique.Play();
-        musique.volume = 0;
-        StartCoroutine(VolumeUp());
+        musique.volume = 1;
+        //StartCoroutine(VolumeUp());
         isTracking = true;
     }
 
     public void Disapear() {
         smoke.SetActive(false);
+        plane.SetActive(false);
         cocktailWrapper.SetActive(false);
         parapluie.transform.localPosition = new Vector3(-0.00306017604f, 0.00423249509f, 0.0045483131f);
         parapluie.transform.localRotation = new Quaternion(-0.527507663f, 0.0597384758f, -0.800903678f, 0.276984423f);
@@ -64,8 +68,8 @@ public class pourritureController : MonoBehaviour
             Destroy((GameObject)cherryList[i]);
         }
         cherryList.Clear();
-        musique.volume = 1;
-        StartCoroutine(VolumeDown());
+        musique.Stop();
+        //StartCoroutine(VolumeDown());
         isTracking = false;
     }
 

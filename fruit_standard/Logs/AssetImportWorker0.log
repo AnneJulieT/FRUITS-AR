@@ -1,0 +1,534 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'fr' Physical Memory: 16250 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Git/FRUITS-AR/fruit_standard
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62560
+Successfully changed project path to: C:/Git/FRUITS-AR/fruit_standard
+C:/Git/FRUITS-AR/fruit_standard
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.4f1 (0abb6314276a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Git/FRUITS-AR/fruit_standard/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   27.21.14.5771
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004608 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.903 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002400 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.376 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1218 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 139.6 MB.
+System memory in use after: 139.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1661.
+Total: 3.283500 ms (FindLiveObjects: 0.514900 ms CreateObjectMapping: 0.249800 ms MarkObjects: 2.396000 ms  DeleteObjects: 0.119900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14ef6062e257b7657c291494229e37a7') in 0.138042 seconds
+  Import took 0.141650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_5.mp3
+  artifactKey: Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_5.mp3 using Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e72129b98845bdadcd8410f438e6bbda') in 0.016824 seconds
+  Import took 0.019337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_1.mp3
+  artifactKey: Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_1.mp3 using Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58414be08bbfce96f2a6219882ac9fe3') in 0.024472 seconds
+  Import took 0.027143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_3.mp3
+  artifactKey: Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_3.mp3 using Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bcbcd95dd8cbe3a0655f711fa2a42a5') in 0.017873 seconds
+  Import took 0.020513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_4.mp3
+  artifactKey: Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_4.mp3 using Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb491a6ce942b1a9e62bd1b44bda91f') in 0.025082 seconds
+  Import took 0.027932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_6.mp3
+  artifactKey: Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_6.mp3 using Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192a1a375088389b44d1ca8fb445819e') in 0.021912 seconds
+  Import took 0.027295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_4.mp3
+  artifactKey: Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_4.mp3 using Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4687e4580e5f377707d8402456997e0') in 0.029572 seconds
+  Import took 0.034769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_5.mp3
+  artifactKey: Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_5.mp3 using Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0cb58a5e1662114816558570fc27e2a') in 0.022246 seconds
+  Import took 0.025127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_6.mp3
+  artifactKey: Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_6.mp3 using Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f6c516013709a89e13146b9eb5a339b') in 0.024723 seconds
+  Import took 0.028528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_3.mp3
+  artifactKey: Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_3.mp3 using Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab206590d3f7bbbad80d92054fffdbd2') in 0.024006 seconds
+  Import took 0.029919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_2.mp3
+  artifactKey: Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_2.mp3 using Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a79b58c4fbfcc0eafab19ffccadf599') in 0.021828 seconds
+  Import took 0.028411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_2.mp3
+  artifactKey: Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_2.mp3 using Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a526d80caece1d9cf8d3b2b93e9fb4d') in 0.022616 seconds
+  Import took 0.026854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004296 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_2.mp3
+  artifactKey: Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_2.mp3 using Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a526d80caece1d9cf8d3b2b93e9fb4d') in 0.012094 seconds
+  Import took 0.015564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.231838 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410584a5fd583e568a0dec9cae99bb8a') in 0.013299 seconds
+  Import took 0.017645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000866 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_5.mp3
+  artifactKey: Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_5.mp3 using Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961c86922137c6ad555c662d81a5cb3f') in 0.015527 seconds
+  Import took 0.021112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410584a5fd583e568a0dec9cae99bb8a') in 0.010796 seconds
+  Import took 0.014501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_1.mp3
+  artifactKey: Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_1.mp3 using Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c90b6d38248cea5cc3ef5eaac25cc35') in 0.013313 seconds
+  Import took 0.016609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_3.mp3
+  artifactKey: Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_3.mp3 using Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728de69613238b6f88460c00c2a57b51') in 0.017374 seconds
+  Import took 0.022809 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_4.mp3
+  artifactKey: Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_4.mp3 using Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5575c38326c31a4948f9dc5470b5fc4e') in 0.014932 seconds
+  Import took 0.019708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_6.mp3
+  artifactKey: Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_6.mp3 using Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09fd0f3725cb3b9514218ff61dca8b2d') in 0.012958 seconds
+  Import took 0.016449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_4.mp3
+  artifactKey: Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_4.mp3 using Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176fe70879d92bc91d292418984a847e') in 0.016016 seconds
+  Import took 0.019024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_5.mp3
+  artifactKey: Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_5.mp3 using Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8423ba74e0d51e5e5eca61af8b71e781') in 0.019017 seconds
+  Import took 0.021795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_6.mp3
+  artifactKey: Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_6.mp3 using Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2f304e726a0e4a6d5afff1394ad094c') in 0.020509 seconds
+  Import took 0.024594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_3.mp3
+  artifactKey: Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_3.mp3 using Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688981d8c3e442da1b5b42e6f59b70bf') in 0.014140 seconds
+  Import took 0.016391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_2.mp3
+  artifactKey: Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_2.mp3 using Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b66105740df023e8e97b227c97b9f1b') in 0.013292 seconds
+  Import took 0.017616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_2.mp3
+  artifactKey: Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_2.mp3 using Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9271bd05a8aa23ab631d0b5fe029f81c') in 0.014056 seconds
+  Import took 0.019727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.724629 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0920003cee971ebd00fe0b4faef68f') in 0.014207 seconds
+  Import took 0.017219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_5.mp3
+  artifactKey: Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_5.mp3 using Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c089ebde0916477f00d01a1a60c1ac6') in 0.019507 seconds
+  Import took 0.025825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0920003cee971ebd00fe0b4faef68f') in 0.019353 seconds
+  Import took 0.024871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_1.mp3
+  artifactKey: Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_1.mp3 using Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ef576c7dcbe042fb9491fbf636533f') in 0.024370 seconds
+  Import took 0.029633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_3.mp3
+  artifactKey: Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_3.mp3 using Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '981191369bab39139a1bf564167c2e18') in 0.021972 seconds
+  Import took 0.025776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_4.mp3
+  artifactKey: Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_4.mp3 using Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2953f2e161530b7bda10212482cc026d') in 0.014342 seconds
+  Import took 0.018567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_6.mp3
+  artifactKey: Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_6.mp3 using Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c6c054d4d401d71b6aa8080fbc227a6') in 0.012731 seconds
+  Import took 0.017239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_4.mp3
+  artifactKey: Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_4.mp3 using Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88117725046a34572e5b1c75a056ee9b') in 0.017767 seconds
+  Import took 0.023200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_5.mp3
+  artifactKey: Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_5.mp3 using Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f75a37e96357144ba2fac5253b90fc7f') in 0.023571 seconds
+  Import took 0.028238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_6.mp3
+  artifactKey: Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_6.mp3 using Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dfdd97c96937a542dd64e75f576df53') in 0.015427 seconds
+  Import took 0.019198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_3.mp3
+  artifactKey: Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_3.mp3 using Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00a5aa3e1470e0f35f3c780dc32faa63') in 0.021125 seconds
+  Import took 0.025373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_2.mp3
+  artifactKey: Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_2.mp3 using Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ca447378ecf2059135cd99c99df949') in 0.013099 seconds
+  Import took 0.017368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_2.mp3
+  artifactKey: Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_2.mp3 using Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '458bcf3e295fe0994bf6a95bcfa38196') in 0.016453 seconds
+  Import took 0.021543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.410568 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b2e24704df82eaecdb38a25d80279d8') in 0.011689 seconds
+  Import took 0.015703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_5.mp3
+  artifactKey: Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_5.mp3 using Guid(1832c446d0fbf87499819c8939536b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfd85619b03d5a7be54cee53a4c5f867') in 0.015802 seconds
+  Import took 0.019471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_1.mp3
+  artifactKey: Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_1.mp3 using Guid(b17be37c2a63a0a4f802eabb0a2b00e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b2e24704df82eaecdb38a25d80279d8') in 0.012486 seconds
+  Import took 0.015629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_1.mp3
+  artifactKey: Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_1.mp3 using Guid(75bfaad5d5691d84085145901a5a6751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cedd1ea0880012117f6763fcd3de83e1') in 0.010463 seconds
+  Import took 0.013596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_3.mp3
+  artifactKey: Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_3.mp3 using Guid(19a34d71f88a2934ebd57393a96e9d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd655092c07002a872d3b83c59fc22a8') in 0.010157 seconds
+  Import took 0.017299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_4.mp3
+  artifactKey: Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_4.mp3 using Guid(71aa7f5656aacc1419cc8e0e59254abf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c9cfe420a9929a6a269b03c0ebc11e') in 0.018767 seconds
+  Import took 0.021626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_6.mp3
+  artifactKey: Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_6.mp3 using Guid(7a967f48eca86914d92c87deb99c92de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef9e9079c1dc672c3581d030ece458f') in 0.011354 seconds
+  Import took 0.014492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_4.mp3
+  artifactKey: Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_4.mp3 using Guid(c8b78056877d4cb42906208c606b9357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c63cee8da69070978c11513dd1f899') in 0.014451 seconds
+  Import took 0.019898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_5.mp3
+  artifactKey: Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_5.mp3 using Guid(356c679dbd973ff4ba4fb26eae1475a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9f6dc9321754dcbee49167ac9a21d2') in 0.024280 seconds
+  Import took 0.027377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_6.mp3
+  artifactKey: Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_6.mp3 using Guid(47c459a02eae9214188c448ce762678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90a09b3499990082333c4bddeb47dd23') in 0.011142 seconds
+  Import took 0.015092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_3.mp3
+  artifactKey: Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_3.mp3 using Guid(667a6ea6e80a1b7479cd1c92abec115c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '911e2a42683cf2b97aeac96cf9f6ba23') in 0.011936 seconds
+  Import took 0.015563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Audio/ORGASMES_sons/female_2.mp3
+  artifactKey: Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/female_2.mp3 using Guid(eedc1aadaf28fde4ea41d12ab2f04bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188872fe2c66ca18cd5802072cb4b040') in 0.012226 seconds
+  Import took 0.017183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Audio/ORGASMES_sons/male_2.mp3
+  artifactKey: Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ORGASMES_sons/male_2.mp3 using Guid(34f8d54d8eb8a504a9def4e3543aacd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377db874f8b58a876b6fd838c3d3758d') in 0.015863 seconds
+  Import took 0.021207 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.5 MB.
+System memory in use after: 118.6 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1670.
+Total: 4.875800 ms (FindLiveObjects: 0.220100 ms CreateObjectMapping: 0.065900 ms MarkObjects: 4.551700 ms  DeleteObjects: 0.035900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.851382 seconds.
+  path: Assets/Musique/trackaj_final.wav
+  artifactKey: Guid(0254e72533d53c341b77e42859dd8420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Musique/trackaj_final.wav using Guid(0254e72533d53c341b77e42859dd8420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58ffcb7627380590773533cb57e4d8ea') in 0.121819 seconds
+  Import took 0.125803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.408358 seconds.
+  path: Assets/Musique/trackaj_final.wav
+  artifactKey: Guid(0254e72533d53c341b77e42859dd8420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Musique/trackaj_final.wav using Guid(0254e72533d53c341b77e42859dd8420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0056ff123d0129ce9458e74859c7cc19') in 0.013013 seconds
+  Import took 0.016055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001327 seconds.
+  path: Assets/Musique/trackaj_final.wav
+  artifactKey: Guid(0254e72533d53c341b77e42859dd8420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Musique/trackaj_final.wav using Guid(0254e72533d53c341b77e42859dd8420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0056ff123d0129ce9458e74859c7cc19') in 0.010483 seconds
+  Import took 0.015072 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 17.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.5 MB.
+System memory in use after: 118.6 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1670.
+Total: 10.668700 ms (FindLiveObjects: 0.273500 ms CreateObjectMapping: 0.103000 ms MarkObjects: 10.262000 ms  DeleteObjects: 0.027300 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

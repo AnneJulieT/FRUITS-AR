@@ -8,6 +8,7 @@ public class flot_v2 : MonoBehaviour
     public GameObject prefabBulle;
     private ArrayList bubbleList = new ArrayList();
     private bool isTracking;
+    [SerializeField] GameObject bubblePosRef;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class flot_v2 : MonoBehaviour
             if (isTracking) 
             {
                 
-                GameObject orangeBub = Instantiate(prefabBulle, new Vector3(0f, 0f, 0f), Quaternion.Euler(0f, Random.Range(0, 360), 0f));
+                GameObject orangeBub = Instantiate(prefabBulle, bubblePosRef.transform.position, Quaternion.Euler(0f, Random.Range(0, 360), 0f));
 
 
                 float scale = Random.Range(0.2f, 0.5f);
