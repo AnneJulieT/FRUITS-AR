@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>%UNITY_WEB_NAME%</title>
-    <script type="text/javascript" src="https://libs.zappar.com/zappar-cv/0.2.12/zappar-cv.js"></script>
+    <script type="text/javascript" src="https://libs.zappar.com/zappar-cv/0.3.8/zappar-cv.js"></script>
     <style>
         html {
             box-sizing: border-box;
@@ -35,10 +35,10 @@
             display: block;
         }
 
-        /* try to handle mobile dialog */
-        canvas+* {
-            z-index: 2;
-        }
+            /* try to handle mobile dialog */
+            canvas + * {
+                z-index: 2;
+            }
 
         .progress {
             margin: 1.5em;
@@ -47,12 +47,12 @@
             display: none;
         }
 
-        .progress .full {
-            margin: 2px;
-            background: white;
-            height: 1em;
-            transform-origin: top left;
-        }
+            .progress .full {
+                margin: 2px;
+                background: white;
+                height: 1em;
+                transform-origin: top left;
+            }
 
         #loader {
             position: absolute;

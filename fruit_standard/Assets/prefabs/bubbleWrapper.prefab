@@ -39,7 +39,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997867508984919731}
-  serializedVersion: 6
+  serializedVersion: 7
   lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
@@ -3669,19 +3669,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -3855,17 +3856,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -5257,15 +5261,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b17be37c2a63a0a4f802eabb0a2b00e0, type: 3}
   - {fileID: 8300000, guid: eedc1aadaf28fde4ea41d12ab2f04bb1, type: 3}
   - {fileID: 8300000, guid: 19a34d71f88a2934ebd57393a96e9d9f, type: 3}
-  - {fileID: 8300000, guid: 71aa7f5656aacc1419cc8e0e59254abf, type: 3}
-  - {fileID: 8300000, guid: 356c679dbd973ff4ba4fb26eae1475a3, type: 3}
-  - {fileID: 8300000, guid: 7a967f48eca86914d92c87deb99c92de, type: 3}
   - {fileID: 8300000, guid: 75bfaad5d5691d84085145901a5a6751, type: 3}
   - {fileID: 8300000, guid: 34f8d54d8eb8a504a9def4e3543aacd1, type: 3}
   - {fileID: 8300000, guid: 667a6ea6e80a1b7479cd1c92abec115c, type: 3}
-  - {fileID: 8300000, guid: c8b78056877d4cb42906208c606b9357, type: 3}
-  - {fileID: 8300000, guid: 1832c446d0fbf87499819c8939536b2c, type: 3}
-  - {fileID: 8300000, guid: 47c459a02eae9214188c448ce762678b, type: 3}
 --- !u!114 &5146187405854555926
 MonoBehaviour:
   m_ObjectHideFlags: 0
