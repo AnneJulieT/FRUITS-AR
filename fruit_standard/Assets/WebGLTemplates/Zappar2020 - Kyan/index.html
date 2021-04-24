@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>fruit_standard</title>
+    <title>{{{ PRODUCT_NAME }}}</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <script type="text/javascript" src="https://libs.zappar.com/zappar-cv/0.3.8/zappar-cv.js"></script>
     <style>
@@ -48,7 +48,7 @@
         #unity-canvas {
             width: 100%;
             height: 100%;
-            /* background: #231F20; */
+            /* background: {{{ BACKGROUND_COLOR }}}; */
         }
 
         #loading-cover {
@@ -184,10 +184,7 @@
     </style>
 </head>
 
-<body class="dark">
-
-
-
+<body class="{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}">
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas"></canvas>
     </div>
@@ -207,15 +204,21 @@
     </div>
     <script>
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/release_1.0.1.loader.js";
+        const loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
         const config = {
-            dataUrl: buildUrl + "/release_1.0.1.data.unityweb",
-            frameworkUrl: buildUrl + "/release_1.0.1.framework.js.unityweb",
-            codeUrl: buildUrl + "/release_1.0.1.wasm.unityweb",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "fruit_standard",
-            productVersion: "0.1",
+            dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+            frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+            codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+            #if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+            #endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+            #endif
+        streamingAssetsUrl: "StreamingAssets",
+            companyName: "{{{ COMPANY_NAME }}}",
+            productName: "{{{ PRODUCT_NAME }}}",
+            productVersion: "{{{ PRODUCT_VERSION }}}",
         };
 
         const container = document.querySelector("#unity-container");
@@ -229,6 +232,9 @@
             container.className = "unity-mobile";
             config.devicePixelRatio = 1;
         }
+#if BACKGROUND_FILENAME
+        canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
+#endif
         loadingCover.style.display = "";
 
         const script = document.createElement("script");
